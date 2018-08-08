@@ -23,9 +23,5 @@ $(function(){
 		});
 	};
 	$('#example').show();
-	$('#example').animate_Text();
-
-  $('.team-item-photo').hover(function() {
-    $(this).children().toggleClass('team-item-photo__description-top--hover', 'team-item-photo__description-bottom--hover');
-  }); 		
+	$('#example').animate_Text(); 		
 });

@@ -24,6 +24,8 @@ html, body {
 }
 p,
 a,
+figure,
+figcaption,
 h1,
 h2,
 h3,
@@ -36,6 +38,11 @@ input,
 textarea,
 a {
 	outline: none !important;
+	border: none;
+}
+::selection {
+	background: rgba(#fff, .4);
+	color: #fff;
 }
 .rotate-block {
 	position: absolute;

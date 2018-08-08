@@ -56,7 +56,7 @@
 			&:hover {
 				animation: none;
 			}
-			img {
+			.icons-item {
 				display: block;
 				width: rem(20px);
 				height: rem(20px);
@@ -488,7 +488,6 @@
 	justify-content: center;
 	height: rem(320px);
 	width: rem(320px);
-	margin-top: rem(70px);
 	@include m-auto;
 }
 .service__heading,
@@ -517,6 +516,7 @@
 	background-position: center;
 	background-attachment: fixed;
 	padding-bottom: rem(100px);
+	padding-top: rem(70px);
 	&-item {
 		border: rem(3px) solid;
 		padding: rem(35px) rem(40px);
@@ -594,13 +594,24 @@
 //END SERVICE
 // TEAM
 .team {
-	padding-bottom: rem(200px);
+	padding-bottom: rem(120px);
+	padding-top: rem(70px);
 	&-item {
 		position: relative;
 		overflow: hidden;
+		&:hover .team-item-photo__description-top {
+			transform: translate(0);
+		}
+		&:hover .team-item-photo__description-bottom {
+			transform: translate(0);
+		}
+		&:hover .team-item-photo {
+			transform: scale(1.2);
+		}
 		&-photo {
 			position: relative;
 			height: rem(400px);
+			overflow: hidden;
 			transition: all 1s;
 			cursor: pointer;
 			&__description-top {
@@ -676,12 +687,6 @@
 					}
 				}
 			}
-			&__description-top--hover {
-				transform: translateY(0);
-			}
-			&__description-bottom--hover {
-				transform: translateY(0);
-			}
 		}
 		&-data {
 			background-color: rgba(#fff, .1);
@@ -704,6 +709,218 @@
 	}
 }
 // END TEAM
+// OUR WORK
+.work {
+	background-color: #1b1b1b;
+	padding-top: rem(85px);
+	padding-bottom: rem(110px);
+	&__heading {
+		color: #ffffff;
+		font-size: rem(36px);
+		margin-bottom: rem(25px);
+		font-weight: 700;
+		line-height: rem(25px);
+		text-transform: uppercase;
+	}
+	&__heading-subtext {
+		color: #333333;
+		font-size: rem(14px);
+		margin-bottom: rem(75px);
+		padding-right: rem(500px);
+		font-weight: 700;
+		line-height: rem(25px);
+	}
+	&-item {
+		position: relative;
+		height: rem(210px);
+		overflow: hidden;
+		&:hover .work-item-photo__link {
+			transform: translate(0);
+		}
+		&-photo {
+			width: 100%;
+			height: 100%;
+			transition: all 1s;
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+		&-photo__link {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			padding-right: rem(15px);
+			padding-left: rem(15px);
+			height: rem(60px);
+			background-color: rgba(#000, .8);
+			transition: transform .8s;
+			transform: translateY(100%);
+			&-text {
+				color: #999;
+				font-size: rem(17px);
+				font-weight: bold;
+			}
+			&-img {
+				display: block;
+				width: rem(25px);
+				height: rem(25px);
+				transition: all .4s;
+				opacity: .6;					
+				&:hover {
+					opacity: 1;
+				}
+				img {
+					display: block;
+					width: 100%;	
+				}
+			}
+		}
+	}
+	&-item--big {
+		height: rem(450px);
+	}
+	&-item--mt {
+		margin-top: rem(30px);
+	}
+}
+//END OUR WORK
+// CONTACTS
+.contacts {
+	padding-top: rem(95px);
+	&__heading {
+		text-align: center;
+		color: #ffffff;
+		font-size: rem(36px);
+		font-weight: 700;
+		line-height: rem(25px);
+		text-transform: uppercase;
+	}
+	&-subtext-block {
+		position: relative;
+		height: rem(140px);
+		padding-top: rem(90px);
+		margin-bottom: rem(140px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 40%;
+		@include m-auto;
+		&__text {
+			position: relative; 
+			z-index: 0;
+			color: #666666;
+			font-size: rem(14px);
+			font-weight: 700;
+			line-height: rem(25px);
+		}
+	}
+	&-map {
+		&__screenshot {}
+	}
+	&-address {
+		&__heading {}
+		&__data {}
+	}
+}
+.form-block {
+	.form {
+		display: flex;
+		flex-direction: column;
+		&__input-name,
+		&__input-email,
+		&__massege,
+		&__button {
+			background-color: rgba(#fff, .1);
+			border: 1px solid transparent;
+		}
+		&__input-name,
+		&__input-email,
+		&__massege {
+			transition: all .6s;
+			cursor: pointer;
+			text-align: center;
+			color: #999;
+			font-size: rem(16px);
+			margin-bottom: rem(10px);
+			font-weight: 400;
+			line-height: 25px;
+			&::placeholder {
+				transition: all .6s;
+				color: #333333;
+				font-size: rem(16px);
+			}
+			&:hover {
+				background-color: rgba(#fff, .2);
+				border: 1px solid rgba(#fff, .1);
+				&::placeholder {
+					color: #999;
+					letter-spacing: 1.5px;
+					font-weight: bold;
+				}
+			}
+			&:focus, &:active {
+				background-color: rgba(#fff, .1);
+				&::placeholder {
+					color: #333333;
+				}
+			}
+		}
+		&__input {
+			height: rem(80px);
+			padding: rem(15px);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__input-name {}
+		&__input-email {}
+		&__massege {
+			height: rem(219px);
+			padding: rem(30px) rem(15px) rem(20px);
+			resize: none;
+		}
+		&__button {
+			color: #666666;
+			font-size: rem(16px);
+			font-weight: 700;
+			text-transform: uppercase;
+			transition: all .4s;
+			&:hover {
+				border: 1px solid rgba(#fff, .3);
+				box-shadow: inset 0 0 10px 2px #000;
+				color: #888;
+			}
+		}
+	}
+}
+.footer-bottom {
+	&-logo {
+		.main-logo {}
+	}
+	&-description {
+		&__text {}
+	}
+	&-icons {
+		.icons-item {
+			height: 16px;
+		}
+	}
+}
+.contacts-rotate-block-small {
+	position: absolute;
+	z-index: 1;
+	width: rem(143px);
+	height: rem(143px);
+	span {
+		border: 1px solid rgba(#fff, .3);
+	}
+}
+//END CONTACTS
 #example .new{opacity: 0;}
 #example .div_opacity{
 	transition: opacity .1s ease-in-out;
