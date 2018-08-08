@@ -1,0 +1,36 @@
+<svg style="display: none;">
+	<symbol id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="371" height="371" viewBox="0 0 371 371">
+		<defs>
+			<path id="v22ha" d="M1094 481.5L1279.5 296 1465 481.5 1279.5 667z" />
+			<path id="v22hb" d="M1148.33 612.67V350.33h262.34v262.34z" />
+			<path id="v22hc" d="M1231.49 660.68l-131.17-227.2 227.2-131.16 131.16 227.2z" />
+			<path id="v22hd" d="M1372.25 642.15l-253.4-67.9 67.9-253.4 253.4 67.9z" />
+			<clipPath id="v22he">
+				<use xlink:href="#v22ha" />
+			</clipPath>
+			<clipPath id="v22hf">
+				<use fill="#fff" xlink:href="#v22hb" />
+			</clipPath>
+			<clipPath id="v22hg">
+				<use fill="#fff" xlink:href="#v22hc" />
+			</clipPath>
+			<clipPath id="v22hh">
+				<use fill="#fff" xlink:href="#v22hd" />
+			</clipPath>
+		</defs>
+		<g opacity=".2" transform="translate(-1094 -296)">
+			<g opacity=".2">
+				<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#v22he&quot;)" xlink:href="#v22ha" />
+			</g>
+			<g opacity=".2">
+				<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#v22hf&quot;)" xlink:href="#v22hb" />
+			</g>
+			<g opacity=".2">
+				<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#v22hg&quot;)" xlink:href="#v22hc" />
+			</g>
+			<g opacity=".2">
+				<use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#v22hh&quot;)" xlink:href="#v22hd" />
+			</g>
+		</g>
+	</symbol>
+</svg>

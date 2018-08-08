@@ -1,0 +1,53 @@
+$m:  375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$vl: 1400px;
+$sl: 1600px;
+
+@mixin mediaOnly($widthFrom, $widthTo, $device: 'all') {
+ @media #{$device} and (min-width: #{$widthFrom}) and (max-width: #{$widthTo - 1px}) {
+    @content;
+ }
+}
+
+@mixin mediaToUp($width, $device: 'all') {
+ @media #{$device} and (min-width: #{$width}) {
+   @content;
+ }
+}
+
+@mixin mediaToDown($width, $device: 'all') {
+ @media #{$device} and (max-width: #{$width - 1px}) {
+   @content;
+ }
+}
+
+@mixin m-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin d-flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin d-flex-row {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin b-ground {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+//Медиа-запросы
+@mixin min-width($media) {
+    @media screen and (min-width: $media) {@content;}
+}

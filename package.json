@@ -1,0 +1,27 @@
+{
+  "name": "gproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VitalyThir",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "^3.0.1",
+    "gulp-notify": "latest",
+    "gulp-sass": "^4.0.1",
+    "gulp-tinypng": "^1.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0"
+  }
+}

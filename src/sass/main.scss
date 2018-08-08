@@ -1,0 +1,72 @@
+@import "plagins/mixins";
+@import "plagins/rem";
+
+html {
+	font-size: 14px;
+	@include min-width(576px) {
+		font-size: 15px;
+	}
+	@include min-width(768px) {
+		font-size: 16px;
+	}
+}
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	background-color: #000;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+}
+input,
+textarea,
+a {
+	outline: none !important;
+}
+.rotate-block {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: .3;
+	transition: all linear 1s;
+	transform: translate3d(0, 0, 0);
+	span {
+		position: absolute;
+		display: block;
+		border: 1px solid;
+		border-color:  rgba(#fff, .2);
+		width: 100%;
+		height: 100%;
+		&:nth-child(1) {
+			transform: rotate(0);
+			animation: nth1 4s infinite linear;
+		}
+		&:nth-child(2) {
+			transform: rotate(45deg);
+			animation: nth2 5s infinite linear;
+		}
+		&:nth-child(3) {
+			transform: rotate(22.5deg);
+			animation: nth3 4s infinite linear;
+		}
+		&:nth-child(4) {
+			transform: rotate(335deg);
+			animation: nth4 5s infinite linear;
+		}
+	}
+}
