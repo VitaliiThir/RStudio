@@ -77,3 +77,34 @@ a {
 		}
 	}
 }
+.main-bar {
+	position: absolute;
+	right: rem(35px);
+	top: rem(70px);
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	img {
+		position: absolute;
+		width: 100%;
+		transition: all 1s;
+	}
+}
+.main-bar-active {
+	transform: translateX(0);
+}
+.main-bar-active--close {
+	transform: translateX(300%);
+	animation: menuActive 1s ease-out;
+}
+.main-bar-close {
+	transform: translateX(300%);
+}
+.main-bar-close--active {
+	transform: translateX(0);
+	animation: menuClose 1s ease-in;
+}
+.main-bar-close--rotate {
+	animation: menuRotate 1.7s linear;
+}
+.nav {}

@@ -92,3 +92,22 @@
 	50% {border-color: rgba(#fff, .5)}
 	100% {border-color: rgba(#fff, .2)}
 }
+// MENU 
+@keyframes menuActive {
+	0% {transform: translateX(0);}
+	50% {transform: translateX(-150%);opacity: .3;}
+	80% {opacity: 0;}
+	100% {transform: translateX(300%);}
+}
+@keyframes menuClose {
+	0% {transform: translateX(0);}
+	50% {transform: translateX(-150%);opacity: .5;}
+	100% {transform: translateX(0);opacity: 1;}
+}
+@keyframes menuRotate {
+	0% {transform: rotate(0);}
+	25% {transform: rotate(360deg);}
+	50% {transform: rotate(720deg);}
+	75% {transform: rotate(1080deg);}
+	100% {transform: rotate(1440deg);}
+}

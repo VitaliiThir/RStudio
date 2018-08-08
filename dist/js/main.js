@@ -23,5 +23,24 @@ $(function(){
 		});
 	};
 	$('#example').show();
-	$('#example').animate_Text(); 		
+	$('#example').animate_Text();
+$('.contacts-map').on('click','.contacts-map__screenshot', function(){
+	$('.contacts-map__screenshot').css('display','none');
+	$('.google-map').css('display','block');
+});
+$(document).click(function(e){
+   		if(!$('.contacts-map').is(e.target) && $('.contacts-map').has(e.target).length === 0) {
+   			$(".google-map").css('display','none');
+   			$(".contacts-map__screenshot").css('display','block');
+   		}
+   	});
+var mainBar = $('.main-bar');
+$(mainBar).on('click', function(){
+	$('.main-bar-active')
+	.removeClass('main-bar-active')
+	.addClass('main-bar-active--close');
+	$('.main-bar-close')
+	.removeClass('main-bar-close')
+	.addClass('main-bar-close--active, main-bar-close--rotate');
+});
 });
