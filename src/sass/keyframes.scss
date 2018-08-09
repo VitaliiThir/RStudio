@@ -23,7 +23,7 @@
 	100% {transform: rotate(-337.5deg);}
 }
 @keyframes nth4 {
-	0% {transform: rotate(335);}
+	0% {transform: rotate(335deg);}
 	100% {transform: rotate(695deg);}
 }
 @keyframes rotateLogo {
@@ -93,21 +93,25 @@
 	100% {border-color: rgba(#fff, .2)}
 }
 // MENU 
-@keyframes menuActive {
+@keyframes mainBarActive {
 	0% {transform: translateX(0);}
 	50% {transform: translateX(-150%);opacity: .3;}
 	80% {opacity: 0;}
 	100% {transform: translateX(300%);}
 }
-@keyframes menuClose {
-	0% {transform: translateX(0);}
-	50% {transform: translateX(-150%);opacity: .5;}
-	100% {transform: translateX(0);opacity: 1;}
+
+@keyframes mainBarClose {
+	0% {transform: rotate(0);opacity: 0;}
+	5% {opacity: .8;}
+	100% {transform: rotate(1440deg);opacity: 1;}
 }
-@keyframes menuRotate {
-	0% {transform: rotate(0);}
-	25% {transform: rotate(360deg);}
-	50% {transform: rotate(720deg);}
-	75% {transform: rotate(1080deg);}
-	100% {transform: rotate(1440deg);}
+@keyframes mainBarCloseHidden {
+	0% {transform: translateX(0);opacity: 1;}
+	50% {transform: translateX(-150%);opacity: .5;}
+	100% {transform: translateX(300%);opacity: 0;}
+}
+// NAVIGATION
+@keyframes navList {
+	0% {transform: rotateX(-270deg);opacity: 0;}
+	100% {transform: rotateX(0);opacity: 1;}
 }

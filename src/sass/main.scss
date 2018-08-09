@@ -39,6 +39,9 @@ textarea,
 a {
 	outline: none !important;
 	border: none;
+	&:hover {
+		text-decoration: none;
+	}
 }
 ::selection {
 	background: rgba(#fff, .4);
@@ -84,27 +87,27 @@ a {
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
+	z-index: 2;
 	img {
 		position: absolute;
 		width: 100%;
-		transition: all 1s;
 	}
 }
 .main-bar-active {
 	transform: translateX(0);
 }
-.main-bar-active--close {
+.main-bar-active-close {
 	transform: translateX(300%);
-	animation: menuActive 1s ease-out;
+	animation: mainBarActive .9s ease-out;
 }
 .main-bar-close {
 	transform: translateX(300%);
 }
-.main-bar-close--active {
+.main-bar-close-elem {
 	transform: translateX(0);
-	animation: menuClose 1s ease-in;
+	animation: mainBarClose .9s linear;
 }
-.main-bar-close--rotate {
-	animation: menuRotate 1.7s linear;
-}
+.main-bar-close-elem-hidden {
+	animation: mainBarCloseHidden .9s ease-out;
+} 
 .nav {}

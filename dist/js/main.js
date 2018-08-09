@@ -24,23 +24,40 @@ $(function(){
 	};
 	$('#example').show();
 	$('#example').animate_Text();
-$('.contacts-map').on('click','.contacts-map__screenshot', function(){
-	$('.contacts-map__screenshot').css('display','none');
-	$('.google-map').css('display','block');
-});
-$(document).click(function(e){
-   		if(!$('.contacts-map').is(e.target) && $('.contacts-map').has(e.target).length === 0) {
-   			$(".google-map").css('display','none');
-   			$(".contacts-map__screenshot").css('display','block');
-   		}
-   	});
-var mainBar = $('.main-bar');
-$(mainBar).on('click', function(){
-	$('.main-bar-active')
-	.removeClass('main-bar-active')
-	.addClass('main-bar-active--close');
-	$('.main-bar-close')
-	.removeClass('main-bar-close')
-	.addClass('main-bar-close--active, main-bar-close--rotate');
-});
+	$('.contacts-map').on('click','.contacts-map__screenshot', function(){
+		$('.contacts-map__screenshot').css('display','none');
+		$('.google-map').css('display','block');
+	});
+	$(document).click(function(e){
+		if(!$('.contacts-map').is(e.target) && $('.contacts-map').has(e.target).length === 0) {
+			$(".google-map").css('display','none');
+			$(".contacts-map__screenshot").css('display','block');
+		}
+	});
+	var mainBar = $('.main-bar');
+	$(mainBar).on('click', '.main-bar-active', function(){
+		$('.main-bar-active').addClass('main-bar-active-close');
+		setTimeout(function(){
+			if($('.main-bar-close').hasClass('main-bar-close-elem-hidden')){
+				$('.main-bar-close').removeClass('main-bar-close-elem-hidden');
+			}
+			$('.main-bar-close').addClass('main-bar-close-elem');
+		}, 700);
+		$('.nav').fadeIn(400).css({
+			'display': '-webkit-flex',
+			'display': '-moz-flex',
+			'display': '-ms-flex',
+			'display': '-o-flex',
+			'display': 'flex'});
+	});
+	$(mainBar).on('click', '.main-bar-close', function(){
+		$('.main-bar-close').removeClass('main-bar-close-elem');
+		$('.main-bar-close').addClass('main-bar-close-elem-hidden');
+		setTimeout(function(){
+			if($('.main-bar-active').hasClass('main-bar-active-close')){
+				$('.main-bar-active').removeClass('main-bar-active-close')
+			}						
+		}, 700);
+		$('.nav').fadeOut(400);
+	});
 });
