@@ -83,7 +83,7 @@ a {
 .main-bar {
 	position: absolute;
 	right: rem(35px);
-	top: rem(70px);
+	top: rem(50px);
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
@@ -91,6 +91,9 @@ a {
 	img {
 		position: absolute;
 		width: 100%;
+	}
+	@include min-width($sm) {
+		top: rem(70px);
 	}
 }
 .main-bar-active {
@@ -105,9 +108,50 @@ a {
 }
 .main-bar-close-elem {
 	transform: translateX(0);
-	animation: mainBarClose .9s linear;
+	animation: mainBarClose .5s linear;
 }
 .main-bar-close-elem-hidden {
 	animation: mainBarCloseHidden .9s ease-out;
 } 
-.nav {}
+.scroll-top {
+	position: fixed;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: -100px;
+	right: 7%;
+	transition: transform .8s;
+	width: 50px;
+	height: 20px;
+	background-color: rgba(#000, .6);
+	border-radius: 4px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	text-align: center;
+	z-index: 999;
+	a {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 10px;
+		text-decoration: none;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		margin-bottom: 3px;
+		border-right: 20px solid transparent;
+		border-left: 20px solid transparent;
+		border-bottom: 10px solid rgba(#fff, .6);
+		left: 50%;
+		margin-left: -(40px/2);
+	}
+	&:hover {
+		transition: opacity .3s;
+		opacity: .5;
+	}
+}
+.scroll-top--visible {
+	transform: translateY(-150px);
+}

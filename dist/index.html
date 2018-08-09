@@ -31,7 +31,7 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header-wrap" style="background-image: url('../img/header/header-bg.jpg');">
+  <header id="top" class="header-wrap" style="background-image: url('../img/header/header-bg.jpg');">
     <div class=" rotate-block01 rotate-block"><span></span><span></span><span></span><span></span></div>
     <div class=" rotate-block02 rotate-block"><span></span><span></span><span></span><span></span></div>
     <div class=" rotate-block03 rotate-block"><span></span><span></span><span></span><span></span></div>
@@ -41,11 +41,11 @@
     </figure>     
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-list__data"><a class="nav-list__link" href="#"><span></span>about us</a></li>
-        <li class="nav-list__data"><a class="nav-list__link" href="#"><span></span>Our Service</a></li>
-        <li class="nav-list__data"><a class="nav-list__link" href="#"><span></span>Our Team</a></li>
-        <li class="nav-list__data"><a class="nav-list__link" href="#"><span></span>our work</a></li>
-        <li class="nav-list__data"><a class="nav-list__link" href="#"><span></span>Contact us</a></li>
+        <li class="nav-list__data"><a class="nav-list__link" href="#about_us"><span></span>about us</a></li>
+        <li class="nav-list__data"><a class="nav-list__link" href="#our_servise"><span></span>Our Service</a></li>
+        <li class="nav-list__data"><a class="nav-list__link" href="#our_team"><span></span>Our Team</a></li>
+        <li class="nav-list__data"><a class="nav-list__link" href="#our_work"><span></span>our work</a></li>
+        <li class="nav-list__data"><a class="nav-list__link" href="#contact_us"><span></span>Contact us</a></li>
       </ul>
     </nav>
     <figure class="icons">
@@ -79,17 +79,15 @@
   <!--END HEADER -->
   <!-- ABOUT US -->
   <main class="content-page">
-    <div class="about-heading-block">
+    <div id="about_us" class="about-heading-block">
       <div class=" rotate-block04 rotate-block"><span></span><span></span><span></span><span></span></div>
       <h3 class="about__heading">about us</h3>
     </div>
     <section class="about" style="background-image: url('../img/about_and_service-bg.jpg');">
-      <div class="about-item-bg-wrap">
-        <div class="about-item-bg" style="background-image: url('..//img/about_us/item-bg.png');"></div>
-      </div>
+
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
+          <div class="col-lg-6 col-xl-5">
             <h4 class="about-item-text__heading">Our story was start here</h4>
             <h5 class="about-item-text__subtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h5>
             <p class="about-item-text__description">
@@ -100,6 +98,9 @@
           </div>
         </div>
       </div>
+      <div class="about-item-bg-wrap">
+        <div class="about-item-bg" style="background-image: url('..//img/about_us/item-bg.png');"></div>
+      </div>
     </section>
     <!--END ABOUT US -->
     <!-- PEOPLE -->
@@ -107,17 +108,17 @@
       <div class="container">
         <div class="people-wrap">
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-sm-5 col-lg-3">
               <div class="people-norman" style="background-image: url('..//img/about_us/about_us-item02.jpg');"></div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-7 col-lg-4">
               <h5 class="people-norman__heading">Don Norman</h5>
               <p id="example" class="people-norman__text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               </p>
               <button class="people-norman__button"><a href="#">more...</a></button>
             </div>
-            <div class="col-lg-5">
+            <div class="col-sm-12 col-lg-5">
               <div class="people-video">
                 <div class="people-video__screenshot" style="background-image: url('..//img/about_us/about_us-item03.jpg');">
                   <div class="people-video__screenshot-play">
@@ -166,7 +167,7 @@
     </section>
     <!--END SCHNEIDER -->
     <!-- SERVICE -->
-    <section class="service" style="background-image: url('../img/about_and_service-bg.jpg');">
+    <section id="our_servise" class="service" style="background-image: url('../img/about_and_service-bg.jpg');">
       <div class="service-heading-block">
         <div class=" service-rotate-block rotate-block"><span></span><span></span><span></span><span></span></div>
         <div class=" service-rotate-block rotate-block"><span></span><span></span><span></span><span></span></div>
@@ -180,7 +181,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4">
             <div class="service-item">
               <div class="service-item__content">
                 <img src="img/service/item01.png" alt="icon" class="service-item__content-img">
@@ -188,7 +189,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 offset-md-0 mt-4 mt-md-0 col-md-6 col-lg-4">
             <div class="service-item">
               <div class="service-item__content">
                 <img src="img/service/item02.png" alt="icon" class="service-item__content-img">
@@ -196,7 +197,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-4 mt-lg-0 offset-lg-0 col-lg-4">
             <div class="service-item">
               <div class="service-item__content">
                 <img src="img/service/item03.png" alt="icon" class="service-item__content-img">
@@ -210,7 +211,7 @@
     </section>
     <!--END SERVICE -->
     <!-- TEAM -->
-    <section class="team">
+    <section id="our_team" class="team">
       <div class="team-heading-block">
         <div class=" team-rotate-block rotate-block"><span></span><span></span><span></span><span></span></div>
         <div class=" team-rotate-block rotate-block"><span></span><span></span><span></span><span></span></div>
@@ -224,7 +225,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4">
             <div class="team-item">
               <div class="team-item-photo" style="background-image: url('../img/team/item01.jpg');"></div>
               <div class="team-item-photo__description-top">
@@ -245,7 +246,7 @@
               <p class="team-item-data__position">uI & ux WEB - Developer</p>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 mt-4 mt-md-0 offset-md-0 col-md-6 col-lg-4">
             <div class="team-item">
               <div class="team-item-photo" style="background-image: url('../img/team/item02.jpg');"></div>
               <div class="team-item-photo__description-top">
@@ -266,7 +267,7 @@
               <p class="team-item-data__position">seo - specialist</p>
             </div>          
           </div>         
-          <div class="col-lg-4">
+          <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 offset-lg-0 mt-4 mt-lg-0 col-lg-4">
             <div class="team-item">
               <div class="team-item-photo" style="background-image: url('../img/team/item03.jpg');"></div>
               <div class="team-item-photo__description-top">
@@ -292,7 +293,7 @@
     </section>
     <!--END TEAM -->
     <!-- OUR WORK -->
-    <div class="work">
+    <div id="our_work" class="work">
       <div class="container">
         <h2 class="work__heading">our work</h2>
         <p class="work__heading-subtext">
@@ -309,14 +310,14 @@
             </figure>
           </div>
           <div class="col-lg-4">
-            <figure class="work-item">
+            <figure class="work-item mt-4 mt-lg-0 work-item--sm">
               <div class="work-item-photo" style="background-image: url('../img/portfolio/item02.jpg');"></div>
               <figcaption class="work-item-photo__link">
                 <p class="work-item-photo__link-text">Go to the real project →</p>
                 <a class="work-item-photo__link-img" href="#"><img src="img/arrow-link.svg" alt="link"></a>
               </figcaption>
             </figure>
-            <figure class="work-item work-item--mt">
+            <figure class="work-item mt-4 work-item--mt work-item--sm">
               <div class="work-item-photo" style="background-image: url('../img/portfolio/item03.jpg');"></div>
               <figcaption class="work-item-photo__link">
                 <p class="work-item-photo__link-text">Go to the real project →</p>
@@ -326,7 +327,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-md-6 mt-4 mt-lg-0 col-lg-4">
             <figure class="work-item work-item--mt">
               <div class="work-item-photo" style="background-image: url('../img/portfolio/item04.jpg');"></div>
               <figcaption class="work-item-photo__link">
@@ -335,7 +336,7 @@
               </figcaption>
             </figure>
           </div>
-          <div class="col-lg-4">
+          <div class="col-md-6 mt-4 mt-lg-0 col-lg-4">
             <figure class="work-item work-item--mt">
               <div class="work-item-photo" style="background-image: url('../img/portfolio/item05.jpg');"></div>
               <figcaption class="work-item-photo__link">
@@ -344,7 +345,7 @@
               </figcaption>
             </figure>
           </div>
-          <div class="col-lg-4">
+          <div class="col-md-6 offset-md-3 offset-lg-0 mt-4 mt-lg-0 col-lg-4">
             <figure class="work-item work-item--mt">
               <div class="work-item-photo" style="background-image: url('../img/portfolio/item06.jpg');"></div>
               <figcaption class="work-item-photo__link">
@@ -358,7 +359,7 @@
     </div>
     <!--END OUR WORK -->
     <!-- CONTACTS -->
-    <footer class="contacts">
+    <footer id="contact_us" class="contacts">
       <h2 class="contacts__heading">Contact us</h2>
       <div class="contacts-subtext-block">
         <div class=" contacts-rotate-block-small rotate-block"><span></span><span></span><span></span><span></span></div>
@@ -368,7 +369,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-sm-8 offset-sm-2 offset-md-0 col-md-6">
             <div class="form-block">
               <form action="" class="form">
                 <input type="text" class="form__input form__input-name" placeholder="Your Name">
@@ -378,7 +379,7 @@
               </form>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-sm-10 offset-sm-1 offset-md-0 mt-4 mt-md-0 col-md-6">
             <div class="contacts-data">
               <div class="contacts-map">
                 <div class="contacts-map__screenshot" style="background-image: url('../img/map.jpg');"></div>
@@ -408,7 +409,7 @@
         <div class="container">
           <div class="footer-bottom-content"> 
             <div class="footer-bottom-logo">
-              <img src="img/main-logo.png" alt="logo" class="main-logo">
+              <a href="#top"><img src="img/main-logo.png" alt="logo" class="main-logo"></a>
             </div>
             <div class="footer-bottom-description">
               <p class="footer-bottom-description__text">
@@ -427,6 +428,9 @@
     </footer>
     <!--END CONTACTS -->
   </main>
+  <!-- SCROLL BUTTON -->
+  <div class="scroll-top"><a href="#top">top</a></div>
+  <!--END SCROLL BUTTON -->
   <script src="libs/jquery/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>

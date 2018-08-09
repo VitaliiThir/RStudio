@@ -66,9 +66,9 @@ gulp.task("watch", function () {
 
 //TINY PNG
 gulp.task('imagemin', function () {
-    gulp.src('./src/img/**/*.*')
+    gulp.src('./dist/img/**/*.+(jpg|png)')
         .pipe(imagemin('iz7JbD3qcVT2ACUb9Gx0Bo5PL_qI38iK'))
-        .pipe(gulp.dest('./src/img'));
+        .pipe(gulp.dest('./dist/img'));
 });
 
 //DEFAULT
